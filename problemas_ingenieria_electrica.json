@@ -1,0 +1,120 @@
+{
+    "ingenieria_electrica": {
+        "sistema_potencia": {
+            "categoria": "Sistemas de Potencia y Transmisión",
+            "subestaciones": {
+                "descripcion": "Problemas operativos en subestaciones de alta tensión",
+                "fallas_comunes": [
+                    {
+                        "id": "SUB-001",
+                        "componente": "Transformador de Potencia",
+                        "sintoma": "Elevación extrema de temperatura y gases disueltos en el aceite",
+                        "causa_raiz": "Degradación del aislamiento de papel por sobrecarga continua",
+                        "gravedad": "Crítica",
+                        "datos_tecnicos": {
+                            "temperatura_aceite_c": 98.5,
+                            "temperatura_bobina_c": 112.0,
+                            "carga_pct": 128.0,
+                            "tension_nominal_kv": 132.0,
+                            "dga_ppm": 420.0
+                        },
+                        "soluciones_anidadas": {
+                            "inmediata": "Reducción manual de carga y activación de ventilación forzada auxiliar",
+                            "analisis": "Prueba de Cromatografía de Gases Disueltos (DGA) en laboratorio",
+                            "definitiva": "Filtrado y desgasificación del aceite o sustitución de bobinados"
+                        }
+                    },
+                    {
+                        "id": "SUB-002",
+                        "componente": "Interruptor de Potencia en SF6",
+                        "sintoma": "Alarma por baja presión de gas SF6 en la bahía de línea",
+                        "causa_raiz": "Fuga micrométrica en los sellos de elastómero debido a envejecimiento",
+                        "gravedad": "Alta",
+                        "datos_tecnicos": {
+                            "presion_sf6_bar": 4.8,
+                            "presion_nominal_bar": 6.2,
+                            "temperatura_bahia_c": 36.7,
+                            "corriente_nominal_ka": 25.0,
+                            "tiempo_fuga_meses": 18.0
+                        },
+                        "soluciones_anidadas": {
+                            "inmediata": "Bloqueo de operaciones de apertura en carga para evitar arco eléctrico catastrófico",
+                            "analisis": "Localización de fugas mediante cámara térmica infrarroja para SF6 o detector ultrasónico",
+                            "definitiva": "Sustitución de juntas tóricas y recarga de gas SF6 hasta la presión nominal"
+                        }
+                    }
+                ]
+            },
+            "lineas_transmision": {
+                "descripcion": "Problemas en líneas aéreas de alta y media tensión",
+                "fallas_comunes": [
+                    {
+                        "id": "LIN-001",
+                        "componente": "Conductores de Fase",
+                        "sintoma": "Cortocircuito fase-tierra intermitente en días de altas temperaturas",
+                        "causa_raiz": "Flecha excesiva (sag) por dilatación térmica que viola las distancias mínimas de seguridad con la vegetación",
+                        "gravedad": "Alta",
+                        "datos_tecnicos": {
+                            "temperatura_conductor_c": 79.4,
+                            "sag_m": 8.6,
+                            "corriente_ka": 1.8,
+                            "tension_linea_kv": 220.0,
+                            "distancia_arbol_m": 2.1
+                        },
+                        "soluciones_anidadas": {
+                            "inmediata": "Despacho de cuadrilla de emergencia para poda de árboles bajo la línea",
+                            "analisis": "Monitoreo de temperatura del conductor en tiempo real (DLR - Dynamic Line Rating)",
+                            "definitiva": "Tensado del conductor o instalación de torres de mayor altura"
+                        }
+                    }
+                ]
+            }
+        },
+        "calidad_energia": {
+            "categoria": "Calidad del Suministro Eléctrico y Distribución",
+            "distribucion_industrial": {
+                "descripcion": "Perturbaciones en la red de distribución interna de plantas industriales",
+                "fallas_comunes": [
+                    {
+                        "id": "PQ-001",
+                        "componente": "Bancos de Condensadores",
+                        "sintoma": "Explosión prematura y sobrecalentamiento de las celdas de capacitores",
+                        "causa_raiz": "Resonancia armónica provocada por variadores de frecuencia y cargas no lineales",
+                        "gravedad": "Alta",
+                        "datos_tecnicos": {
+                            "temperatura_celda_c": 93.2,
+                            "thd_pct": 24.8,
+                            "potencia_kvar": 500.0,
+                            "tension_nominal_v": 440.0,
+                            "frecuencia_hz": 50.0
+                        },
+                        "soluciones_anidadas": {
+                            "inmediata": "Desconexión segura del banco de condensadores afectado",
+                            "analisis": "Medición con analizador de redes clase A para registrar el espectro de armónicos (THD)",
+                            "definitiva": "Instalación de reactores de rechazo (filtros desintonizados) en serie con los condensadores"
+                        }
+                    },
+                    {
+                        "id": "PQ-002",
+                        "componente": "Motores de Inducción",
+                        "sintoma": "Pérdida de torque, vibraciones mecánicas anómalas y sobrecalentamiento en los devanados",
+                        "causa_raiz": "Desequilibrio de tensiones (voltage unbalance) en las fases de alimentación superior al 2%",
+                        "gravedad": "Media",
+                        "datos_tecnicos": {
+                            "temperatura_devana_c": 88.5,
+                            "desbalance_fases_pct": 2.7,
+                            "potencia_kw": 75.0,
+                            "corriente_a": 130.0,
+                            "velocidad_rpm": 1485.0
+                        },
+                        "soluciones_anidadas": {
+                            "inmediata": "Reducción de la carga mecánica del motor (derating) para evitar fallas",
+                            "analisis": "Verificación de la simetría de cargas en el tablero de distribución principal",
+                            "definitiva": "Redistribución de cargas monofásicas o instalación de un regulador automático de voltaje de respuesta rápida"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

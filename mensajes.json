@@ -1,0 +1,16 @@
+{
+  "mensajes": [
+    {
+      "remitente": "Técnico",
+      "texto": "Se revisará la subestación de atención urgente.",
+      "prioridad": "alta",
+      "fecha": "2026-09-29"
+    },
+    {
+      "remitente": "Operador",
+      "texto": "Se detectó un aumento de temperatura en el transformador.",
+      "prioridad": "media",
+      "fecha": "2026-09-29"
+    }
+  ]
+}
